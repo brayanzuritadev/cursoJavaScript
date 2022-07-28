@@ -1,0 +1,13 @@
+const persona ={
+    nombre: 'Juan',
+    apellido: 'perez'
+}
+
+function cambiarValorObjeto(p1){
+    p1.nombre = 'carlos';
+    p1.apellido = 'Lara';
+}
+
+//paso por referencia
+cambiarValorObjeto(persona)
+console.log(persona);

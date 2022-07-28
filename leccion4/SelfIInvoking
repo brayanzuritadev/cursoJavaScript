@@ -1,0 +1,5 @@
+//no se puede ser llamada nuevamente por no tener nombre
+//se podria llamar cuando se inicia un programa web
+(function(){
+    console.log("ejecutando la funcion")
+})()
