@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con javaScript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="cabecero">Ejemplo DOM con javaScript</h1>
+    <p id="parrafo" class="azul">Saludos</p>
+    <p class="azul">hola soy nuevo</p>
+    <button onclick="location.href='/DOM/fomulario.html'">Form</button>
+
+    <button onclick="location.href='/DOM/asociarElmentosHTML.html'">mostrar</button>
+
+    <button onclick="location.href='/DOM/eventoOnload.html'">onload</button>
+    <a href="/DOM/eventoOnchange.html">Evento onchange</a>
+    <br/>
+    <a href="/DOM/addEventLister.html">Evento onchange</a>
+    <br/>
+    <a href="/DOM/delegacionEventos.html">Delegacion de eventos</a>
+
+    <script>
+        let cabecero = document.getElementById('cabecero')
+        console.log(cabecero.innerHTML)
+
+        let parrafo = document.getElementById('parrafo').innerHTML
+        console.log(parrafo)
+
+        parrafo.innerHTML = "nuevo valor del parrafo"
+
+        cabecero.innerHTML = "nuevo valor del cabecero"
+
+        console.log("llamando por el tipo de etiqueta")
+
+        let parrafos = document.getElementsByTagName("p")
+
+        console.log(parrafos)
+        for(let parrafo of parrafos){
+            console.log(parrafo.innerHTML)
+        }
+        
+
+        let porclassName = document.getElementsByClassName("azul")
+
+        for(let i = 0; i<porclassName.length ; i++){
+            console.log(`${i} ${porclassName[i].innerHTML}`)
+        }
+    </script>
+</body>
+</html>

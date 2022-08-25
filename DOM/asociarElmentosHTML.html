@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo"> Manejo de DOM con javaScript</h1>
+    <br/>
+    <div id="mostrar"></div>
+    <script>
+        document.getElementById("titulo").onclick = cambiarTexto; // esto es una llamada callback
+
+        function cambiarTexto(){
+            document.getElementById("mostrar").innerHTML = "cambio de texto"
+        }
+    </script>
+</body>
+</html>

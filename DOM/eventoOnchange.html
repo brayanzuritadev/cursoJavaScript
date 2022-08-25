@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id = "titulo" onmouseover="rojo(this)" onmouseout="azul(this)">DOM con javaScript</h2>
+
+    <div>
+        Nombre: <input type="text" onchange="comvertir(this)">
+    </div>
+
+    <script>
+        function comvertir(inputText){
+            inputText.value = inputText.value.toUpperCase();
+        }
+
+        //uso de onmouseout onmouseover
+        function rojo(titulo){
+            titulo.style.color="red"
+        }
+
+        function azul(titulo){
+            titulo.style.color="blue"
+        }
+    </script>
+</body>
+</html>

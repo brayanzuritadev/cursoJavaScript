@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="entrar()">
+
+    <div id="mostrar"></div>
+    <script>
+        //este evento se lanza cuando la pagina esta cargando
+        
+        function entrar(){
+            alert("Entrando a la pagina")
+
+            if(navigator.cookieEnabled){
+                document.getElementById("mostrar").innerHTML="estan habilitadas las cookies"
+            }else{
+                document.getElementById("mostrar").innerHTML = "no estan habilitadas las cookies"
+            }
+        }
+
+    </script>
+</body>
+</html>

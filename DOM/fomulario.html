@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Este es un formulario</h1>
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="Brayan"/>
+        <br/>
+        <br/>
+        Apellido: <input type="text" name="apellido" value="Zurita"/>
+        <br/>
+    </form>
+        <br/>
+    <button onclick="mostrarDatos()">Mostrar</button>
+        <br/>
+
+        <div id = "valores"></div>
+
+    <script>
+        function mostrarDatos(){
+            let form = document.forms["formulario"]
+            let texto = ""
+            for(let campo of form){
+                texto += campo.value + '<br/>'
+            }
+            console.log(texto)
+            document.getElementById("valores").innerHTML = texto
+        }
+    </script>
+</body>
+</html>
